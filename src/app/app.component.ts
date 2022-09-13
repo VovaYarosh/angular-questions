@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import questions from 'src/jsons/angular.json';
+import {Question} from "./question.interface";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'script';
+  searchText = '';
+  questions: Question[] = questions;
+
+  public onSearch(event: Event): void {
+    this.searchText = (event.target as HTMLInputElement).value;
+  }
 }
