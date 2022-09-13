@@ -5,11 +5,11 @@
 <hr>
 
 <ng-container *ngFor="let question of questions | filter: searchText">
-  <div [innerHtml]="question.title | highlighter: searchText">
+  <div [innerHtml]="question?.title | highlighter: searchText">
   </div>
-  <div [innerHtml]="question.english | highlighter: searchText">
+  <div [innerHtml]="question?.english | highlighter: searchText">
   </div>
-  <div [innerHtml]="question.ukrainian | highlighter: searchText">
+  <div [innerHtml]="question?.ukrainian | highlighter: searchText">
   </div>
   <hr>
 </ng-container>

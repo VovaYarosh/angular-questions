@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import questions from 'src/jsons/angular.json';
+import {Component, OnInit} from '@angular/core';
+import {questionsArray} from 'src/questions.array';
 import {Question} from "./question.interface";
 
 @Component({
@@ -7,9 +7,20 @@ import {Question} from "./question.interface";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   searchText = '';
-  questions: Question[] = questions;
+  questions: Question[] = questionsArray;
+
+  ngOnInit(){
+    console.log(this.questions.length)
+    this.questions.forEach((item, index) => {
+      console.log(index)
+      if(!item.english){
+        console.log(item)
+      }
+    })
+
+  }
 
   public onSearch(event: Event): void {
     this.searchText = (event.target as HTMLInputElement).value;

@@ -5,10 +5,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class HighlighterPipe implements PipeTransform {
 
-  transform(value: any, args: any): any {
-    if (!args) {return value;}
-    const re = new RegExp(args, 'gi');
-    return value.replace(re, "<mark>$&</mark>");
-  }
+  public transform(value: string, predicate: string): string {
+    console.log(predicate)
+    if(!predicate){
+      return value;
+    }
+    return value?.replace(new RegExp(predicate, 'gi'), `<mark>${predicate}</mark>`);
+    }
 
 }

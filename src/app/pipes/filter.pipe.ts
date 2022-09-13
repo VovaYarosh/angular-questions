@@ -13,9 +13,9 @@ export class FilterPipe implements PipeTransform {
         return(
           title.toLocaleLowerCase().indexOf(value.toLocaleLowerCase()) > -1
           ||
-          english.toLocaleLowerCase().indexOf(value.toLocaleLowerCase()) > -1
+          english?.toLocaleLowerCase().indexOf(value.toLocaleLowerCase()) > -1
           ||
-          ukrainian.toLocaleLowerCase().indexOf(value.toLocaleLowerCase()) > -1
+          ukrainian?.toLocaleLowerCase().indexOf(value.toLocaleLowerCase()) > -1
         )
       });
 
