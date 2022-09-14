@@ -6,7 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class HighlighterPipe implements PipeTransform {
 
   public transform(value: string, predicate: string): string {
-    console.log(predicate)
     if(!predicate){
       return value;
     }
