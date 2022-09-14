@@ -1,20 +1,4 @@
 <div class="wrapper">
-  <div class="search-row">
-    <input
-      type="search"
-      (input)="onSearch($event)"
-      placeholder="Search question"
-      class="search-input"
-    />
-  </div>
-  <div class="list">
-    <ng-container *ngFor="let question of questions | filter: searchText">
-      <div class="list-item">
-        <h3 [innerHtml]="question.title | highlighter: searchText"></h3>
-        <p [innerHtml]="question?.english | highlighter: searchText" class="divider"></p>
-        <p [innerHtml]="question?.ukrainian | highlighter: searchText"></p>
-      </div>
-    </ng-container>
-  </div>
+  <app-search (onSearch)="searchValue = $event"></app-search>
+  <app-questions-list [searchText]="searchValue"></app-questions-list>
 </div>
-

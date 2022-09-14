@@ -1,18 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {questionsArray} from 'src/questions.array';
-import {Question} from "./question.interface";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent{
-  searchText = '';
-  questions: Question[] = questionsArray;
-
-
-  public onSearch(event: Event): void {
-    this.searchText = (event.target as HTMLInputElement).value;
-  }
+export class AppComponent {
+  public searchValue: string = '';
 }

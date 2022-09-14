@@ -4,12 +4,18 @@ import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
 import { HighlighterPipe } from './pipes/highlighter.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
+import { QuestionComponent } from './components/question/question.component';
+import { QuestionsListComponent } from './components/questions-list/questions-list.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HighlighterPipe,
-    FilterPipe
+    FilterPipe,
+    QuestionComponent,
+    QuestionsListComponent,
+    SearchComponent
   ],
 	imports: [
 		BrowserModule,
