@@ -9,10 +9,11 @@ import {Question} from "./question.interface";
 })
 export class AppComponent{
   searchText = '';
-  questions: Question[] = questionsArray;
+  questions = questionsArray;
 
 
   public onSearch(event: Event): void {
+    console.log(this.questions)
     this.searchText = (event.target as HTMLInputElement).value;
   }
 }
