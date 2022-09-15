@@ -1,0 +1,8 @@
+<div class="list" *ngIf="questions.length">
+  <app-question
+    class="question"
+    *ngFor="let question of questions | filter: searchText"
+    [question]="question"
+    [searchText]="searchText"
+  ></app-question>
+</div>
