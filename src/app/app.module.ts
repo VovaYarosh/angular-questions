@@ -7,6 +7,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { QuestionComponent } from './components/question/question.component';
 import { QuestionsListComponent } from './components/questions-list/questions-list.component';
 import { SearchComponent } from './components/search/search.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SearchComponent } from './components/search/search.component';
     FilterPipe,
     QuestionComponent,
     QuestionsListComponent,
-    SearchComponent
+    SearchComponent,
+    HeaderComponent
   ],
 	imports: [
 		BrowserModule,

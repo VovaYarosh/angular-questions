@@ -1,0 +1,10 @@
+<div class="header">
+  <p
+    class="technology"
+    [ngClass]="{ active: tech === technology }"
+    *ngFor="let tech of techStack"
+    (click)="chooseTech(tech)"
+  >
+    {{ tech }}
+  </p>
+</div>

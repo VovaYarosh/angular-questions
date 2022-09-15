@@ -1,10 +1,10 @@
 <div class="wrapper">
-  <div class="header">
-    <span (click)="chooseTech('angular')">Angular</span>
-    <span (click)="chooseTech('react')">React</span>
-    <span (click)="chooseTech('nodejs')">NodeJS</span>
-  </div>
-  <hr>
-  <app-search (onSearch)="searchValue = $event"></app-search>
-  <app-questions-list [technology]="technology" [searchText]="searchValue"></app-questions-list>
+  <app-header (onTech)="technology = $event"></app-header>
+
+  <app-search class="search" (onSearch)="searchValue = $event"></app-search>
+
+  <app-questions-list
+    [technology]="technology"
+    [searchText]="searchValue"
+  ></app-questions-list>
 </div>

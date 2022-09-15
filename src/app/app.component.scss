@@ -2,13 +2,18 @@
   padding: 20px;
 }
 
-.header{
+.search {
+  display: block;
+  margin-top: 20px;
+}
+
+.header {
   display: flex;
   justify-content: space-around;
   color: black;
   border: 2px solid black;
   font-size: 28px;
-  span:hover{
+  span:hover {
     cursor: pointer;
   }
 }
