@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   public searchValue: string = '';
+  public technology: string = 'angular'
+
+  chooseTech(tech: string) {
+    this.technology = tech
+    console.log(this.technology)
+  }
 }

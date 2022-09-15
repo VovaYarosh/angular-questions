@@ -1,6 +1,6 @@
-import {Question} from "./app/question.interface";
+import {Question} from "../question.interface";
 
-export const questionsArray = [
+export const angularArray = [
   {
     title: `Advantages of Angular?`,
     english: `- Angular has exceptional support for typescript;
@@ -21,12 +21,6 @@ export const questionsArray = [
     title: `What is it SPA?`,
     english: `SPA is a single-page web application, which modules are loaded only once.The main advantages of such interface are the fast operation of the application and the absence of reloading the website when switching to other pages.`,
     ukrainian: `SPA - односторінковий веб-додаток, модулі якого завантажуються лиш один раз, основними перевагами такого інтерфейсу є швидка робота додатку та відсутність перезавантаження веб-сайту при переходах на інші сторінки.`
-  },
-  {
-    title: `Disadvantages of Angular`,
-    english: `variety of different structures make it difficult to learn compared to react;
-Relatively slow performance in view of various indicators. On the other hand, this can be easily solved by using the so-called ChangeDetectionStrategy, which helps to manually control the rendering process of components.;
-`
   },
   {
     title: `Disadvantages of Angular`,
