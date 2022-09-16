@@ -6,7 +6,7 @@ import {Question} from "../question.interface";
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(items: Question[], value: string): any[] {
+  transform(items: Question[], value: string): Question[] {
     if (!items) return [];
     if(value) {
       return items.filter(({title, english, ukrainian}) => {

@@ -1,6 +1,6 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input, OnChanges} from '@angular/core';
 import { Question } from '../../question.interface';
-import { techStack } from '../../data/tech.stack';
+import {techStack, techStackEnum} from '../../data/tech.stack';
 
 @Component({
   selector: 'app-questions-list',
@@ -9,7 +9,7 @@ import { techStack } from '../../data/tech.stack';
 })
 export class QuestionsListComponent implements OnChanges {
   @Input() public searchText: string = '';
-  @Input() public technology: string = 'angular';
+  @Input() public technology: string = techStackEnum.ANGULAR;
   public questions: Question[] = techStack[this.technology];
 
   public ngOnChanges(): void {

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Question } from '../../question.interface';
-import { techStack } from '../../data/tech.stack';
+import {techStack, techStackEnum} from '../../data/tech.stack';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +9,7 @@ import { techStack } from '../../data/tech.stack';
 })
 export class HeaderComponent {
   @Output() public onTech: EventEmitter<string> = new EventEmitter<string>();
-  public technology: string = 'angular';
+  public technology: string = techStackEnum.ANGULAR;
   public questions: Question[] = techStack[this.technology];
   public techStack: string[] = Object.keys(techStack);
 

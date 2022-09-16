@@ -1,7 +1,13 @@
 import {angularArray} from "./angular.array";
 
+export enum techStackEnum{
+  ANGULAR = 'angular',
+  REACT = 'react',
+  NODEJS = 'nodejs'
+}
+
 export const techStack = {
-  angular: angularArray,
-  react: [],
-  nodejs: []
+  [techStackEnum.ANGULAR]: angularArray,
+  [techStackEnum.REACT]: [],
+  [techStackEnum.NODEJS]: []
 } as any
