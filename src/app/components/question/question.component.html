@@ -1,0 +1,5 @@
+<div class="question">
+  <h3 [innerHTML]="question.title | highlighter: searchText"></h3>
+  <p class="en" [innerHTML]="question.english | highlighter: searchText"></p>
+  <p class="ua" [innerHTML]="question.ukrainian | highlighter: searchText"></p>
+</div>

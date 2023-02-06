@@ -1,0 +1,11 @@
+<div class="header">
+  <p
+    class="technology"
+    [ngClass]="{ active: tech === technology }"
+    *ngFor="let tech of techStackArray"
+    (click)="chooseTech(tech)"
+  >
+    {{ tech }}
+    {{tech === technology ? '(' + countOfQuestions + ')' : ''}}
+  </p>
+</div>

@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div class="navbar">
+    <app-header (onTech)="technology = $event"></app-header>
+    <app-search class="search" (onSearch)="searchValue = $event"></app-search>
+  </div>
+
+  <app-questions-list
+    [technology]="technology"
+    [searchText]="searchValue"
+  ></app-questions-list>
+</div>
