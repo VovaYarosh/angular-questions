@@ -307,6 +307,11 @@ export const  reactArray = [
     ukrainian: `ФУНКЦІОНАЛЬНИЙ КОМПОНЕНТ — це звичайна чиста функція JavaScript, яка приймає властивості як аргумент і повертає елемент React (JSX). У функціональних компонентах не використовується метод рендер. Методи життєвого циклу React (наприклад, componentDidMount) не можна використовувати у функціональних компонентах. Хуки можна легко використовувати у функціональних компонентах, щоб зробити їх Stateful. КОМПОНЕНТ КЛАСУ вимагає розширення з React. класовий компонент повинен мати метод render(), який повертає JSX (який синтаксично схожий на HTML). Методи життєвого циклу React можна використовувати всередині компонентів класу (наприклад, componentDidMount). Це вимагає іншого синтаксису всередині компонента класу для реалізації хуків.`
   },
   {
+    title:`what hooks you know in react app?`,
+    english:`react hooks - 1.useState, 2.useEffect, 3.useRef, 4.useCallback, 5.useMemo, 6.useContext, 7.useReducer, 8.useTransition, 9.useDebugValue, 10.useDebugValue, 11.useId; React-router hooks - 1.useHistory, 2.useParams, 3.useLocation, 4.useRouteMatch`,
+    ukrainian: `...`,
+  },
+  {
     title: `what are the benefits of react hooks?`,
     english: `By the hooks we got Improving Readability of Component Tree. The "useContext" hook has been a blessing for greatly improving the readability of JSX as it allows context values to be read outside of JSX. This was also previously possible in class components by using the static "contextType" property but is even cleaner with "useContext". Aside from the code being easier to read it is also much easier to read the component tree in the React dev tools when debugging. The value of this really adds up for components that previously used multiple nested contexts. Encapsulating Side Effects - "useEffect" solves this problem by handling both the setup and teardown of side effects. It does so by allowing the effect function to return a function to teardown the effect. Custom hooks are considerably a great mechanism for sharing logic across various components. A custom hook is simply a function that uses one or more React hooks and it can be called within a functional component, just like a standard hook.`,
     ukrainian: `За допомогою хуків ми отримали покращення читабельності дерева компонентів. Хук «useContext» був благословенням для значного покращення читабельності JSX, оскільки він дозволяє зчитувати контекстні значення за межами JSX. Раніше це також було можливо в компонентах класу за допомогою статичної властивості "contextType", але ще чистіше з "useContext". Окрім легшого читання коду, також набагато легше читати дерево компонентів в інструментах розробника React під час налагодження. Цінність цього дійсно збільшується для компонентів, які раніше використовували кілька вкладених контекстів. - Інкапсуляція побічних ефектів - "useEffect" вирішує цю проблему, обробляючи як налаштування, так і демонтаж побічних ефектів. Це робиться, дозволяючи функції ефекту повертати функцію для зняття ефекту. - Користувальницькі хуки є чудовим механізмом для обміну логікою між різними компонентами. Спеціальний хук — це просто функція, яка використовує один або кілька хуків React, і її можна викликати у функціональному компоненті, як і стандартний хук.`
@@ -402,27 +407,27 @@ export const  reactArray = [
     ukrainian:`Функція cloneElement, як зрозуміло з назви повертає копію вказаного елементу. в цю функцію можна передати додаткові пропси, або дочірні елементи. cloneElement можна використовувати коли дочірний елемент хоче додати або змінити властивість своїх дочірніх елементів. Що стосується createElement то дана функція використовується для створення та повернення нового react елемента заданого типу. Аргумент типу може бути стрінгою імені тега, наприклад ‘div’ or ‘span’, а також типом react component, class or function або типом react fragment. Код jsx буде перетворений для використання в react.`,
   },
   {
-    title: `what is useReducer?`,
+    title: `what is useReducer hook?`,
     english:`useReducer is a hook that takes a reducer function and the initial state of the application as arguments. Returns the current state and dispatcher for dispatching operations. Although useState is a basic hook and useReducer is an advanced one. useState is implemented thanks to useReducer, which means that useReducer is a primitive that can be used in all cases of using useState. The mechanism of operation is as follows. First, the initial state and reducer are determined. They are passed to the useReducer hook. This hook returns the current state value and the dispatcher used to update the state. When the user clicks on the button, a certain operation is sent to the reducer, which updates the counter based on the operation. In this way, you can define as many operations as the application needs.`,
     ukrainian:`useReducer - це хук, який приймає функію reducer, та початковий стейт додатку в якості аргументів. Повертає наявний стан та діспатчер для відправки операцій.Незважаючи на те, що useState - базовий хук, а useReducer - просунутий. useState реалізований завдяки useReducer, а це означає що useReducer  - це примітив який може використовуватись у всіх випадках використання useState.Механізм роботи наступний: Спочатку визначається інішіал стейт та reducer. Вони передаються в хук useReducer. Цей хук повертає наявне значення стану та діспатчер, який використовується для оновлення стейту. Коли користувач натискає на кнопку то відбувається відправка певної операції в редюсер, який оновлює лічильник на основі операції. Таким чином можна визначати стільки операцій скільки потрібно додатку.`,
   },
   {
-    title: `what is useCallback?`,
+    title: `what is useCallback hook?`,
     english:`Хук React useCallback повертає мемоїзовану функцію зворотного виклику. Запам'ятовування робить кешування значенням, щоб його не потрібно було перевизначати. Це дозволяє нам ізолювати ресурсомісткі функції, щоб вони не запускалися автоматично при кожному рендері. Хук useCallback запускається лише тоді, коли оновлюється одна з його залежностей. Це покращує продуктивність.`,
     ukrainian:`The React useCallback hook returns a memoized callback function. Remembering makes caching a value so that it doesn't need to be overridden. This allows us to isolate resource-intensive functions so they don't run automatically on every render. The useCallback hook only fires when one of its dependencies is updated. This improves performance.`,
   },
   {
-    title: `what is useMemo?`,
+    title: `what is useMemo hook?`,
     english:`useMemo() hook - can be used to optimize calculations that happen in functional components, useMemo is similar to useCallback except that it takes any value, not just functions, basically it takes a function that returns a value and an array of dependencies, the value returned by the function. It is redefined only when dependencies change`,
     ukrainian:`Хук useMemo() - може використовуватись для оптимізації вичислень, які відбуваються в функціональних компонентах, useMemo схожий на useCallback за винятком того що він приймає будь-яке значення, а не лише функції, в основному він приймає функцію яка повертає значення, та масив залежностей, значення яке повертається функцією. Визначається повторно тільки при зміні залежностей `,
   },
   {
-    title: `what is useImperativeHandle?`,
+    title: `what is useImperativeHandle hook?`,
     english:`The useImperativeHandle hook - allows you to customize the value that is passed to the parent component thanks to the ref. useImperativeHandle should be used in compatibility with forwardRef`,
     ukrainian:`Хук useImperativeHandle - дозволяє кастомізувати значення, яке передається батьківському компоненту завдяки ref. useImperativeHandle  має використовуватись в сумісності з forwardRef`,
   },
   {
-    title: `what is useLayoutEffect?`,
+    title: `what is useLayoutEffect hook?`,
     english:`useLayoutEffect is a hook that runs after all dom manipulations are done, but before the browser renders it. This may be useful for obtaining additional information from the dom. For example, to get the amount of scrolling, or element styles and use this information to adjust the dom. Also to trigger a re-render by changing its state. This hook is designed to perform those tasks performed by such methods as componentDidMount and componentDidUpdate.`,
     ukrainian:`useLayoutEffect - це хук, що запускається після виконання всіх маніпуляцій з dom, проте до його відмалювання браузером. Це може бути корисним для отримання додаткової інформації з дом. Наприклад для отримання величини прокрутки, або стилів елемента та використання цієї інформації для корегування дом. Також для запуску повторного рендеру шляхом зміни його стану. Даний хук призначений для виконання тих задач які виконують такі методи як componentDidMount and componentDidUpdate.`,
   },
@@ -452,22 +457,22 @@ export const  reactArray = [
     ukrainian:`Починаючи з 5 версії react router слідом за бібліотекою реакт став підтримувати хуки. В результаті його реалізації з'явились такі хуки як useHistory, useLocation, UseParams,  useRouteMatch.`,
   },
   {
-    title: `what is useHistory?`,
+    title: `what is useHistory hook?`,
     english:` Its a hook from react router. useHistory gives access to the history prop in react router, refers to the history dependency used by the router. The main value is in software routing thanks to such methods as push, replace and so on.`,
     ukrainian:`це хук з react router. useHistory дає доступ до пропсу history в react router, посилається на залежність history, яка використовується роутером. Основне значення полягає в програмному роутингу завдяки таким методам як push, replace і так далі.`,
   },
   {
-    title: `what is useLocation?`,
+    title: `what is useLocation hook?`,
     english:`This is a hook from react router. useLocation - provides access to the location props. Similar to window location, but available anywhere, as it is a representation of the state and location of the router.`,
     ukrainian:`Це хук з react router. useLocation - надає доступ до пропсу location. Схожий на window location, проте доступний в любому місці, оскільки є представленням стейту та локації роутера.`,
   },
   {
-    title: `what is useParams?`,
+    title: `what is useParams hook?`,
     english:`This is a react router hook that provides access to the search bar options in the url.`,
     ukrainian:`Це хук з react router, що надає доступ до параметрів пошукової стрічки в url.`,
   },
   {
-    title: `what is useRouteMatch?`,
+    title: `what is useRouteMatch hook?`,
     english:`This is a react router hook that provides access to the match object, the purpose of which is to build nested routes.`,
     ukrainian:`Це хук з react router, що надає доступ до об' єкту match, метою якого є побудова вкладених маршрутів.`,
   },
@@ -512,14 +517,34 @@ export const  reactArray = [
     ukrainian: `Ререндеринг запускається, коли оновлюється стейт або змінюється властивість у компоненті. Компонент, який ініціював зміну стейту, позначається та повторно відображається, і всі дочірні компоненти також повторно відображаються. Цей процес виглядає виглядаэ наступним чином: - Позначаэться компонент, який ініціював зміну стейту; - Цей компонент і його дочірні компоненти аналізуються, а потім JSX перетворюється на елементи React за допомогою React.createElement і зберігається в пам’яті; - Новий віртуальний DOM створюється за допомогою елементів React, а потім порівнюється з попереднім віртуальним DOM за допомогою алгоритму відмінності. Зміни надсилаються на етап фіксації. React використовує алгоритм порівняння Object.is, тому зміни стейту повинні бути незмінними.`,
   },
   {
-    title: `useMemo vs useCallback`,
+    title: `useMemo hook vs useCallback hook`,
     english: `The main difference between useMemo and useCallback hook is, useMemo returns memoized value and useCallback returns memoised function.`,
     ukrainian: `Основна відмінність між useMemo і useCallback хуком полягає в тому, що useMemo повертає мемоізоване значення, а useCallback повертає мемоізовану функцію.`,
   },
   {
-    title: `What is useContext`,
+    title: `What is useContext hook?`,
     english: `A context is a method of passing data or information through a tree of components without manually sending attributes through each nested component. It is specifically designed to share data that can be considered generic data for a tree composed of React components, such as the current user authentication status or a theme (eg color, padding, margins, font size). Basically, to get the data from the lowest child component, we need to use the properties in each component. To avoid this pain, we use the useContext hook.`,
     ukrainian: `Контекст — це метод передачі даних або інформації через дерево компонентів без надсилання атрибутів вручну через кожен вкладений компонент. Він спеціально розроблений для обміну даними, які можна вважати загальними даними для дерева, що складається з компонентів React, як-от поточний статус автентифікації користувача або тема (наприклад, колір, відступи, поля, розмір шрифту). В основному, щоб отримати дані з найнижчого дочірнього компонента, нам потрібно використовувати властивості в кожному компоненті. Щоб уникнути цього болю, ми використовуємо хук useContext.`,
+  },
+  {
+    title:`what is useTransition hook?`,
+    english:`useTransition is a React Hook that lets you update the state without blocking the UI.`,
+    ukrainian:`цей хук дозволяє заапдейтити стейт без блокування ui`,
+  },
+  {
+    title:`what is useId hook?`,
+    english:`The useId is a new hook introduced in React 18. The useId hook helps generate a unique Id on both the client-side and server-side.`,
+    ukrainian:`UseId — це новий хук, представлений у React 18. Хук useId допомагає генерувати унікальний ідентифікатор як на стороні клієнта, так і на стороні сервера.`,
+  },
+  {
+    title:`what is useDeferredValue hook?`,
+    english:`The useDeferredValue hook allows us to fix this slow render problem by implementing a delay before some information is calculated. This works in a very similar way to debouncing and throttling since our deferred value will only be calculated after the important state updates have finished running. `,
+    ukrainian:`Хук useDeferredValue дозволяє виправити проблему повільного рендерингу шляхом реалізації затримки перед обчисленням певної інформації. Це працює дуже подібно до debouncing and throttling, оскільки відкладене значення буде обчислено лише після завершення виконання важливих оновлень стейту.`,
+  },
+  {
+    title:`what is useDebugValue hook?`,
+    english:`useDebugValue is a simple inbuilt Hook that provides more information about the internal logic of a custom Hook within the React DevTools. It allows you to display additional, helpful information next to your custom Hooks, with optional formatting.`,
+    ukrainian:`useDebugValue — це простий вбудований хук, який надає більше інформації про внутрішню логіку власного хука в React DevTools. Це дозволяє відображати додаткову корисну інформацію в межах власних спеціальних хуків з додатковим форматуванням.`,
   },
   {
     title: `How to save previous state of the component?`,

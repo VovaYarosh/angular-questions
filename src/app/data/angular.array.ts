@@ -559,30 +559,100 @@ Thanks to this version of the compilation, the application starts up faster. The
     english: `The compose() method is used to create a higher-order observable, which is an observable that is composed of multiple other observables. This is often used when working with multiple streams of data that need to be processed together in some way.`,
     ukrainian: `Метод compose() використовується для створення observable вищого порядку, який є  observable, що складається з кількох інших  observables. Це часто використовується під час роботи з кількома потоками даних, які певним чином потрібно обробляти разом.`
   },
+  {
+    title: `What is angular form validators?`,
+    english: `A form field validator is a function that the form can call in order to decide if a given form field is valid or not. A validator function returns true if the form field is valid according to the validator rules, or false otherwise.`,
+    ukrainian: `Валідатор поля форми — це функція, яку може викликати форма, щоб вирішити, чи дане поле форми дійсне чи ні. Функція валідатора повертає значення true, якщо поле форми є дійсним відповідно до правил перевірки, або false в іншому випадку.`
+  },
+  {
+    title: `What is the methods of angular form validators?`,
+    english: `min(), max(), required(), email(), maxLength()...`,
+    ukrainian: `...`
+  },
+  {
+    title: `what is the Asynchronous Validators?`,
+    english: `The main difference from simple validators that the type returned AsyncValidatorFn. This means that the validation function itself needs to return either a promise or an Observable that emits a value of type ValidationErrors. For example, we have used Observables, by calling the HTTP based UserService that called our backend and checked if the user exists on the database.`,
+    ukrainian: `Основна відмінність від простих валідаторів полягає в тому, що тип повертає AsyncValidatorFn. Це означає, що сама функція перевірки повинна повертати або проміс, або Observable, які видають значення типу ValidationErrors. Наприклад, ми використали Observables, викликавши службу UserService на основі HTTP, яка викликала наш сервер і перевірила, чи існує користувач у базі даних.`
+  },
+  {
+    title: `what is updateOn property in forms?`,
+    english: `The updateOn property is useful to define when the form value should be updated with the latest form field value. This is important because by default the value is communicated as quickly as possible. For example, in the case of an input text field, this will by default be communicated with each key pressed by the user, which might be too fast for certain scenarios such as asynchronous validators.`,
+    ukrainian: `Властивість updateOn корисна, щоб визначити, коли значення форми слід оновити останнім значенням поля форми. Це важливо, оскільки за замовчуванням значення передається якомога швидше. Наприклад, у разі  введення у інпуті, за замовчуванням повідомлятиметься про кожну натиснуту користувачем клавішу, що може бути надто швидким для певних сценаріїв наприклад для асинхроних валідаторів.`
+  },
+  {
+    title: `What are the different values that updateOn can take?`,
+    english: `- change: This is the default value. This means that the form will update with each new field value (causing all field validators to run). For a select box or check box, this will happen when the user selects a new value, but for a text box, it will happen after each key press. - blur: This means that the form will be updated with the new field value only when the field is blurred, ie the user has either tabbed or clicked elsewhere on the page. - submit: rarely used, but available if needed. This means that the form will only be updated immediately after the form is submitted.`,
+    ukrainian: ` - change: це значення за замовчуванням. Це означає, що форма буде оновлюватися з кожним новим значенням поля (що призведе до запуску всіх валідаторів полів). Для поля вибору або прапорця це станеться, коли користувач вибере нове значення, але для текстового поля це станеться після кожного натискання клавіші. - blur: це означає, що форма буде оновлено новим значенням поля лише тоді, коли поле розмито, тобто користувач або перейшов із вкладкою, або клацнув деінде на сторінці. - submit: використовується рідко, але доступне, якщо потрібно. Це означає, що форму буде оновлено лише одразу після надсилання форми.`
+  },
+  {
+    title: `what are lifecycle hooks you know?`,
+    english: `- ngOnChanges: When an input/output binding value changes. - ngOnInit: After the first ngOnChanges. - ngDoCheck: Developer's custom change detection. - ngAfterContentInit: After component content initialized. - ngAfterContentChecked: After every check of component content. - ngAfterViewInit: After a component's views are initialized. - ngAfterViewChecked: After every check of a component's views. - ngOnDestroy: Just before the component/directive is destroyed`,
+    ukrainian: `- ngOnChanges: коли змінюється значення прив’язки введення/виведення. - ngOnInit: після перших ngOnChanges. - ngDoCheck: виявлення власних змін розробником. - ngAfterContentInit: після ініціалізації вмісту компонента. - ngAfterContentChecked: після кожної перевірки вмісту компонента. - ngAfterViewInit: після ініціалізації представлень компонента. - ngAfterViewChecked: після кожної перевірки представлень компонента. - ngOnDestroy: безпосередньо перед знищенням компонента/директиви`
+  },
+  {
+    title: `what is ngOnChanges hook?`,
+    english: `This method is called once on a component's creation and then every time changes are detected in one of the component’s input properties. It receives a SimpleChanges object as a parameter, which contains information regarding which of the input properties has changed - in case we have more than one - and its current and previous values.This is one of the lifecycle hooks which can come in handy in multiple use cases. It is very useful if you need to handle any specific logic in the component based on the received input property.`,
+    ukrainian: `Цей метод викликається один раз під час створення компонента, а потім кожного разу, коли виявляються зміни в одній із вхідних властивостей компонента. Він отримує об’єкт SimpleChanges як параметр, який містить інформацію про те, яка вхідна властивість змінилася (якщо у нас більше однієї), а також її поточні та попередні значення. Це один із перехоплювачів життєвого циклу, який може стати в нагоді в кількох випадках використання. Це дуже корисно, якщопотрібно обробити будь-яку конкретну логіку в компоненті на основі отриманої вхідної властивості.`
+  },
+  {
+    title:`what is ngOnInit hook?`,
+    english:`This method is called only once during the component lifecycle, after the first ngOnChanges call. ngOnInit() is still called even when ngOnChanges() is not, which is the case when there are no template-bound inputs. This is one of the most used lifecycle hooks in Angular. Here is where you might set requests to the server to load content, maybe create a FormGroup for a form to be handled by that component, set subscriptions, and much more. It is where you can perform any initializations shortly after the component’s construction.`,
+    ukrainian:`Цей метод викликається лише один раз протягом життєвого циклу компонента, після першого виклику ngOnChanges. ngOnInit() всерівно викликається, навіть якщо ngOnChanges() не викликається, у випадку відсутності прив’язаних до шаблону вхідних даних. Це один із найбільш використовуваних хуків життєвого циклу в Angular. Тут можна  встановити запити до сервера для завантаження вмісту, можливо, створити FormGroup для форми, яку буде обробляти цей компонент, встановити підписки та багато іншого. Тут можна виконувати будь-які ініціалізації після створення компонента.`
+  },
+  {
+    title:`what is ngDoCheck hook?`,
+    english:`This hook can be interpreted as an “extension” of ngOnChanges. You can use this method to detect changes that Angular can’t or won’t detect. It is called in every change detection, immediately after the ngOnChanges and ngOnInit hooks. This hook is costly since it is called with enormous frequency; after every change detection cycle no matter where the change occurred. Therefore, its usage should be careful to not affect the user experience.`,
+    ukrainian:`Цей хук можна інтерпретувати як «розширення» ngOnChanges. Можна використовувати цей метод для виявлення змін, які Angular не може або не хоче виявити. Він викликається під час кожного виявлення змін одразу після хуків ngOnChanges і ngOnInit. Цей хук дорогий, тому що викликається з величезною частотою; після кожного циклу виявлення змін незалежно від того, де відбулася зміна. Тому його використання має бути обережним, щоб не вплинути на досвід користувача.`
+  },
+  {
+    title:`what is ngAfterViewInit hook?`,
+    english:`This method is called only once during the component’s lifecycle, after the first ngDoCheck. Within this hook, we have access for the first time to the ElementRef of the ContentChild after the component’s creation; after Angular has already projected the external content into the component’s view.`,
+    ukrainian:`Цей метод викликається лише один раз протягом життєвого циклу компонента, після першого ngDoCheck. У цьому хуку надається доступ до ElementRef ContentChild після створення компонента; після того, як Angular вже спроектував контент у поданні компонента.`
+  },
+  {
+    title:`what is ngAfterContentChecked hook?`,
+    english:`This method is called once during the component’s lifecycle after ngAfterContentInit and then after every subsequent ngDoCheck. It is called after Angular has already checked the content projected into the component`,
+    ukrainian:`Цей метод викликається один раз протягом життєвого циклу компонента після ngAfterContentInit, а потім після кожного наступного ngDoCheck. Він викликається після того, як Angular вже перевірив вміст, спроектований у компонент`
+  },
+  {
+    title:`what is ngOnDestroy hook?`,
+    english:`this method is called only once during the component’s lifecycle, right before Angular destroys it. Here is where you should inform the rest of your application that the component is being destroyed, in case there are any actions to be done regarding that information.Also, it is where you should put all your cleanup logic for that component. For instance, it is where you can remove any local storage information and most importantly unsubscribe observables/detach event handlers/stop timers, etc. to avoid memory leaks.`,
+    ukrainian:`цей метод викликається лише один раз протягом життєвого циклу компонента, безпосередньо перед тим, як Angular знищить його. Тут потрібно повідомити решту апки про те, що компонент знищується, на випадок, якщо потрібно виконати будь-які дії щодо цієї інформації. Крім того, тут потрібно розмістити всю логіку очищення для цього компонента. Наприклад, тут можна видалити будь-яку інформацію про локальне зберігання і, що найважливіше, скасувати підписку,  від’єднати обробники подій,зупинити таймери ітд, щоб уникнути витоку пам’яті.`
+  },
   // {
-  //   title: ``,
-  //   english: ``,
-  //   ukrainian: ``
+  //   title:``,
+  //   english:``,
+  //   ukrainian:``
   // },
   // {
-  //   title: ``,
-  //   english: ``,
-  //   ukrainian: ``
+  //   title:``,
+  //   english:``,
+  //   ukrainian:``
   // },
   // {
-  //   title: ``,
-  //   english: ``,
-  //   ukrainian: ``
+  //   title:``,
+  //   english:``,
+  //   ukrainian:``
   // },
   // {
-  //   title: ``,
-  //   english: ``,
-  //   ukrainian: ``
+  //   title:``,
+  //   english:``,
+  //   ukrainian:``
   // },
   // {
-  //   title: ``,
-  //   english: ``,
-  //   ukrainian: ``
-  // }
+  //   title:``,
+  //   english:``,
+  //   ukrainian:``
+  // },
+  // {
+  //   title:``,
+  //   english:``,
+  //   ukrainian:``
+  // },
+  // {
+  //   title:``,
+  //   english:``,
+  //   ukrainian:``
+  // },
 ] as Question[];
-//validators, lifecyclemethods, rxjs - methods, subjects
+//lifecyclemethods, rxjs - methods, subjects
